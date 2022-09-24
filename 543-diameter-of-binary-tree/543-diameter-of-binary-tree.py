@@ -11,12 +11,12 @@ class Solution:
         def dfs(root):
             if not root:
                 return -1
-            left= dfs(root.left)
+            left= dfs(root.left) # to search the node
             right= dfs(root.right)
             
-            res[0] = max(res[0], 2+left+right)
+            res[0] = max(res[0], 2+left+right) #diameter
             
-            return 1+ max(left, right)
+            return 1+ max(left, right) # height
         
         dfs(root)
         return res[0]
