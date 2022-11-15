@@ -1,9 +1,9 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         
-        # using hash Map
+        # using hash Map     timeComplexity: O(n) SpaceComplexity: O(n)
         
-        # first check the length of both the strings
+#         # first check the length of both the strings
         if len(s) != len(t):
             return False
         
@@ -20,4 +20,11 @@ class Solution:
             if countS[i] != countT.get(i, 0):
                 return False
         return True
+        
+         # 3rd solution
+         # For spaceComplexity: O(1) by using sorting technique
+         #   return sorted(s) == sorted(t)
+        
+        # 2nd Solution one liner
+        # return Counter(s) == Counter(t)
             
